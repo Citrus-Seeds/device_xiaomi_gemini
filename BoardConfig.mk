@@ -1,5 +1,6 @@
 #
 # Copyright (C) 2016 The CyanogenMod Project
+# Copyright (C) 2016 Citrus-CAF Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -20,18 +21,8 @@ DEVICE_PATH := device/xiaomi/gemini
 
 TARGET_SPECIFIC_HEADER_PATH := device/xiaomi/gemini/include
 
-# Architecture
-TARGET_ARCH := arm64
-TARGET_ARCH_VARIANT := armv8-a
-TARGET_CPU_ABI := arm64-v8a
-TARGET_CPU_ABI2 :=
-TARGET_CPU_VARIANT := kryo
-
-TARGET_2ND_ARCH := arm
-TARGET_2ND_ARCH_VARIANT := armv7-a-neon
-TARGET_2ND_CPU_ABI := armeabi-v7a
-TARGET_2ND_CPU_ABI2 := armeabi
-TARGET_2ND_CPU_VARIANT := cortex-a53
+# include qcom msm8996 tree
+-include device/qcom/msm8996/BoardConfig.mk
 
 ENABLE_CPUSETS := true
 
@@ -42,7 +33,6 @@ TARGET_OTA_ASSERT_DEVICE := gemini
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := msm8996
-TARGET_NO_BOOTLOADER := true
 
 # Kernel
 BOARD_KERNEL_BASE := 0x80000000
@@ -59,7 +49,6 @@ TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8996
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 
 # Platform
-TARGET_BOARD_PLATFORM := msm8996
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno530
 
 # Releasetools
@@ -97,15 +86,12 @@ USE_CUSTOM_AUDIO_POLICY := 1
 #USE_XML_AUDIO_POLICY_CONF := 1
 
 # Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 BOARD_BLUETOOTH_BDROID_HCILP_INCLUDED := false
 BOARD_HAS_QCA_BT_ROME := true
-BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_QCOM := true
 QCOM_BT_USE_BTNV := true
 
 # Camera
-BOARD_QTI_CAMERA_32BIT_ONLY := true
 TARGET_USES_MEDIA_EXTENSIONS := true
 USE_DEVICE_SPECIFIC_CAMERA := true
 
@@ -116,26 +102,12 @@ BOARD_CHARGER_ENABLE_SUSPEND := true
 BOARD_USES_QCNE := true
 
 # Display
-MAX_VIRTUAL_DISPLAY_DIMENSION := 4096
-TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
 TARGET_USES_C2D_COMPOSITION := true
-TARGET_USES_ION := true
-TARGET_USES_OVERLAY := true
-USE_OPENGL_RENDERER := true
-
-MAX_EGL_CACHE_KEY_SIZE := 12*1024
-MAX_EGL_CACHE_SIZE := 2048*1024
 
 OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 
 VSYNC_EVENT_PHASE_OFFSET_NS := 2000000
 SF_VSYNC_EVENT_PHASE_OFFSET_NS := 6000000
-
-# Encryption
-TARGET_HW_DISK_ENCRYPTION := true
-
-# Init
-TARGET_PLATFORM_DEVICE_BASE := /devices/soc/
 
 # Keymaster
 TARGET_PROVIDES_KEYMASTER := true
@@ -162,7 +134,6 @@ TARGET_POWERHAL_VARIANT := qcom
 # QCOM
 BOARD_USES_QCOM_HARDWARE := true
 BOARD_USES_QC_TIME_SERVICES := true
-TARGET_USE_SDCLANG := true
 
 # Recovery
 BOARD_HAS_LARGE_FILESYSTEM := true
@@ -170,20 +141,12 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/fstab.qcom
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 TARGET_RECOVERY_UI_LIB := librecovery_ui_msm
 TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_msm
-TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
-
-# RIL
-PROTOBUF_SUPPORTED := true
-TARGET_RIL_VARIANT := caf
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
 
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
-
-# Sensors
-USE_SENSOR_MULTI_HAL := true
 
 # Vendor init
 TARGET_INIT_VENDOR_LIB := libinit_gemini
