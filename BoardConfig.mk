@@ -21,6 +21,8 @@ DEVICE_PATH := device/xiaomi/gemini
 
 TARGET_SPECIFIC_HEADER_PATH := device/xiaomi/gemini/include
 
+TARGET_USE_CM_RAMDISK := true
+
 # include qcom msm8996 tree
 include device/qcom/msm8996/BoardConfig.mk
   
