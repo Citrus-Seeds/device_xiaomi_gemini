@@ -128,8 +128,8 @@ PRODUCT_PACKAGES += \
     libcnefeatureconfig
 
 # ConfigPanel
-PRODUCT_PACKAGES += \
-    ConfigPanel \
+#PRODUCT_PACKAGES += \
+#    ConfigPanel \
 
 # Display
 PRODUCT_PACKAGES += \
@@ -144,13 +144,13 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/calib.cfg:system/etc/calib.cfg
 
 # Doze mode
-PRODUCT_PACKAGES += \
-    XiaomiDoze
+#PRODUCT_PACKAGES += \
+#    XiaomiDoze
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    fingerprintd \
-    XiaomiPocketMode
+    fingerprintd 
+#   XiaomiPocketMode
 
 # For android_filesystem_config.h
 PRODUCT_PACKAGES += \
@@ -193,8 +193,8 @@ PRODUCT_PACKAGES += \
     libebtc
 
 # KeyHandler
-PRODUCT_PACKAGES += \
-    com.cyanogenmod.keyhandler
+#PRODUCT_PACKAGES += \
+#    com.cyanogenmod.keyhandler
 
 # Lights
 PRODUCT_PACKAGES += \
