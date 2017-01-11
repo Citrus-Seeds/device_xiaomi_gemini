@@ -19,6 +19,8 @@ BOARD_VENDOR := xiaomi
 
 DEVICE_PATH := device/xiaomi/gemini
 
+TARGET_USE_DEVICE_UTILS := true
+
 TARGET_SPECIFIC_HEADER_PATH := device/xiaomi/gemini/include
 
 TARGET_USE_CM_RAMDISK := true

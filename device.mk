@@ -25,6 +25,9 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 # Include msm8996 qcom tree
 include device/qcom/msm8996/msm8996.mk
 
+# Include DeviceUtils
+include external/DeviceUtils/common.mk
+
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
@@ -127,10 +130,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libcnefeatureconfig
 
-# ConfigPanel
-#PRODUCT_PACKAGES += \
-#    ConfigPanel \
-
 # Display
 PRODUCT_PACKAGES += \
     copybit.msm8996 \
@@ -191,10 +190,6 @@ PRODUCT_PACKAGES += \
     ebtables \
     ethertypes \
     libebtc
-
-# KeyHandler
-#PRODUCT_PACKAGES += \
-#    com.cyanogenmod.keyhandler
 
 # Lights
 PRODUCT_PACKAGES += \
