@@ -25,7 +25,7 @@ TARGET_USE_CM_RAMDISK := true
 
 # include qcom msm8996 tree
 include device/qcom/msm8996/BoardConfig.mk
-  
+
 ENABLE_CPUSETS := true
 
 TARGET_USES_64_BIT_BINDER := true
@@ -51,6 +51,9 @@ TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 
 # Platform
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno530
+
+# Properties
+include := device/xiaomi/gemini/system_prop.mk
 
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := device/qcom/common
