@@ -56,7 +56,7 @@ TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno530
 
 # Properties
-include := device/xiaomi/gemini/system_prop.mk
+TARGET_SYSTEM_PROP := device/xiaomi/gemini/system.prop
 
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := device/qcom/common
