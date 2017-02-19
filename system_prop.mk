@@ -161,7 +161,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.multisim.config=dsds \
     persist.radio.rat_on=combine \
     persist.radio.redir_party_num=1 \
-    persist.radio.sib16_support=1
+    persist.radio.sib16_support=1 \
+    telephony.lteOnCdmaDevice=1,1
 
 # RmNet Data
 PRODUCT_PROPERTY_OVERRIDES += \
