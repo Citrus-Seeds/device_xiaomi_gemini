@@ -44,3 +44,11 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="gemini-user 7.0 NRD90M 7.1.19 release-keys"
 
 TARGET_VENDOR := Xiaomi
+
+# Citrus-CAF Kenzo Maintainer
+ PRODUCT_BUILD_PROP_OVERRIDES += \
+ DEVICE_MAINTAINERS="Aditya Garg (phenomx1998)"
+
+# Branch
+ PRODUCT_PROPERTY_OVERRIDES += \
+ ro.caf.branch=LA.UM.5.5.r1-02800-8x96.0
