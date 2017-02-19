@@ -1,0 +1,2 @@
+add_lunch_combo citrus_gemini-eng
+add_lunch_combo citrus_gemini-userdebug
