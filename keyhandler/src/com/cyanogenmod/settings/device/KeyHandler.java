@@ -20,7 +20,6 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.provider.Settings;
 import android.util.Log;
 import android.view.KeyEvent;
 
@@ -29,6 +28,7 @@ import com.android.internal.os.DeviceKeyHandler;
 import org.cyanogenmod.internal.util.FileUtils;
 
 import cyanogenmod.hardware.CMHardwareManager;
+import cyanogenmod.providers.CMSettings;
 
 public class KeyHandler implements DeviceKeyHandler {
 
@@ -85,7 +85,7 @@ public class KeyHandler implements DeviceKeyHandler {
     }
 
     private boolean hasSetupCompleted() {
-        return Settings.Secure.getInt(mContext.getContentResolver(),
-                Settings.Secure.USER_SETUP_COMPLETE, 0) != 0;
+        return CMSettings.Secure.getInt(mContext.getContentResolver(),
+                CMSettings.Secure.CM_SETUP_WIZARD_COMPLETED, 0) != 0;
     }
 }
