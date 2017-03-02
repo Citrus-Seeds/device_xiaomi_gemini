@@ -112,7 +112,10 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    Snap
+    Snap \
+  	camera.msm8996 \
+    libqomx_core \
+    libmm-qcamera 
 
 # Device config scripts
 PRODUCT_PACKAGES += \
