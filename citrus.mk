@@ -51,4 +51,4 @@ TARGET_VENDOR := Xiaomi
 
 # Branch
  PRODUCT_PROPERTY_OVERRIDES += \
- ro.caf.branch=LA.UM.5.5.r1-02800-8x96.0
+ ro.caf.branch=LA.UM.5.5.r1-03400-8x96.0
