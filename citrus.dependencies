@@ -1,10 +1,12 @@
 [
   {
-    "repository": "android_device_qcom_common",
-    "target_path": "device/qcom/common"
+    "repository": "proprietary_vendor_xiaomi",
+    "target_path": "vendor/xiaomi",
+    "branch": "n"
   },
   {
-    "repository": "android_kernel_xiaomi_msm8996",
-    "target_path": "kernel/xiaomi/msm8996"
+    "repository": "LineageOS/android_kernel_xiaomi_msm8996",
+    "target_path": "kernel/xiaomi/msm8996",
+    "branch": "cm-14.1"
   }
 ]
