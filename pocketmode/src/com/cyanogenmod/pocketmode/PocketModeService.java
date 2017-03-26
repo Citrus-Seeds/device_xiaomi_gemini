@@ -28,6 +28,8 @@ import android.util.Log;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.cyanogenmod.pocketmode.utils.FileUtils;
+
 public class PocketModeService extends Service {
     private static final String TAG = "PocketModeService";
     private static final boolean DEBUG = false;
