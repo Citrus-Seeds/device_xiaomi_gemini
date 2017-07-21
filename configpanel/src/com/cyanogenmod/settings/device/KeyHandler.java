@@ -32,11 +32,7 @@ public class KeyHandler implements DeviceKeyHandler {
     private static final String TAG = KeyHandler.class.getSimpleName();
 
     private static final String FP_HOME_NODE = "/sys/devices/soc/soc:fpc_fpc1020/enable_key_events";
-<<<<<<< HEAD
-    public static final String VIRTUAL_KEYS_NODE = "/proc/touchpanel/capacitive_keys_enable";
-=======
 	public static final String VIRTUAL_KEYS_NODE = "/proc/touchpanel/capacitive_keys_enable";
->>>>>>> 47b6a33... gemini: fix keyhandler and pocketmode after merge
 
     private static boolean sScreenTurnedOn = true;
     private static final boolean DEBUG = false;

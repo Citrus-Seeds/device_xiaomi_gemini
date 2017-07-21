@@ -28,12 +28,9 @@ public class Startup extends BroadcastReceiver {
     private static final String TAG = "XiaomiPocketMode";
 
     @Override
-    public void onReceive(Context context, Intent intent) {
-        final String action = intent.getAction();
-        if (cyanogenmod.content.Intent.ACTION_INITIALIZE_CM_HARDWARE.equals(action)) {
-            Log.d(TAG, "Starting");
-            context.startServiceAsUser(new Intent(context, PocketModeService.class),
-                    UserHandle.CURRENT);
-        }
+    public void onReceive(final Context context, Intent intent) {
+        Log.d(TAG, "Starting");
+        context.startServiceAsUser(new Intent(context, PocketModeService.class),
+            UserHandle.CURRENT);
     }
 }
