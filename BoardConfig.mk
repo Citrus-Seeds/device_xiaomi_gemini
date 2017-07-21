@@ -21,7 +21,9 @@ DEVICE_PATH := device/xiaomi/gemini
 
 TARGET_SPECIFIC_HEADER_PATH := device/xiaomi/gemini/include
 
-TARGET_USE_CM_RAMDISK := true 
+TARGET_USE_CM_RAMDISK := true
+
+USE_LOCAL_GNSSPPS := true
 
 # Architecture
 TARGET_ARCH := arm64
@@ -66,7 +68,7 @@ TARGET_BOARD_PLATFORM := msm8996
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno530
 
 # Properties
-TARGET_SYSTEM_PROP += device/xiaomi/system.prop
+TARGET_SYSTEM_PROP += device/xiaomi/gemini/system.prop
 
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "qualcomm-uart"
