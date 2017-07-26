@@ -116,10 +116,8 @@ persist.rild.nitz_short_ons_2=""
 persist.rild.nitz_short_ons_3=""
 
 # Perf
-ro.am.reschedule_service=true
 ro.min_freq_0=307200
 ro.min_freq_4=307200
-ro.sys.fw.bg_apps_limit=60
 ro.vendor.extension_library=libqti-perfd-client.so
 
 # Radio
@@ -139,8 +137,9 @@ persist.radio.multisim.config=dsds
 persist.radio.rat_on=combine
 persist.radio.redir_party_num=1
 persist.radio.sib16_support=1
+persist.radio.add_power_save=1
 
-# RmNet Data 
+# RmNet Data
 persist.rmnet.data.enable=true
 persist.data.wda.enable=true
 persist.data.df.dl_mode=5
@@ -162,3 +161,20 @@ sys.usb.controller=6a00000.dwc3
 
 # Wifi
 wifi.interface=wlan0
+
+
+# Background service properties
+ro.config.max_starting_bg=5
+
+# Reschedule the services during app launch
+ro.am.reschedule_service=true
+
+# Spare some RAM
+persist.sys.purgeable_assets=1
+
+# Dex2oat threads for faster app installation
+# Use all 4 Cores/Threads of our CPU
+ro.sys.fw.dex2oat_thread_count=4
+dalvik.vm.dex2oat-threads=4
+dalvik.vm.image-dex2oat-threads=4
+debug.generate-debug-info=false
